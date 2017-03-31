@@ -7,6 +7,7 @@
   "author": "alexjhannan",
   "license": "MIT",
   "dependencies": {
+    "babel-preset-es2016": "^6.22.0",
     "firebase": "^3.7.4",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
@@ -18,7 +19,6 @@
   "devDependencies": {
     "babel-core": "^6.24.0",
     "babel-loader": "^6.4.1",
-    "babel-preset-es2015": "^6.24.0",
     "babel-preset-react": "^6.23.0",
     "styled-components": "^1.4.4",
     "webpack": "^2.3.2",
