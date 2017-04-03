@@ -1,5 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import InviteContainer from './containers/InviteContainer';
+import store from './store/store';
 
-ReactDOM.render(<div>Hello world</div>,
-  document.getElementById('container'));
+const app = (
+  <Provider store={store}>
+    <InviteContainer />
+  </Provider>
+);
+
+ReactDOM.render(app, document.getElementById('appContainer'));
