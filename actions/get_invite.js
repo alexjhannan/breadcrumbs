@@ -1,5 +1,5 @@
-import ActionTypes from '../constants/action_types';
-import database from './database';
+import ACTION_TYPES from '~/constants/action_types';
+import database from '~/firebase/database';
 
 export function getInvite() {
   return (dispatch) => {
@@ -17,19 +17,19 @@ export function getInvite() {
 
 function getInviteRequestedAction() {
   return {
-    type: ActionTypes.GetInviteRequested
+    type: ACTION_TYPES.GetInviteRequested
   };
 }
 
 function getInviteRejectedAction() {
   return {
-    type: ActionTypes.GetInviteRejected
+    type: ACTION_TYPES.GetInviteRejected
   }
 }
 
 function getInviteFulfilledAction(invite) {
   return {
-    type: ActionTypes.GetInviteFulfilled,
+    type: ACTION_TYPES.GetInviteFulfilled,
     invite
   };
 }

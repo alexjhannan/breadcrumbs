@@ -1,10 +1,10 @@
 import firebase from 'firebase';
-import CONFIG from '../config';
+import GLOBAL_CONFIG from '~/config.js';
 
 const config = {
-  apiKey: CONFIG.firebaseAPIKey,
-  authDomain: CONFIG.firebaseAuthDomain,
-  databaseURL: CONFIG.firebaseDatabaseURL
+  apiKey: GLOBAL_CONFIG.firebaseAPIKey,
+  authDomain: GLOBAL_CONFIG.firebaseAuthDomain,
+  databaseURL: GLOBAL_CONFIG.firebaseDatabaseURL
 };
 
 firebase.initializeApp(config);

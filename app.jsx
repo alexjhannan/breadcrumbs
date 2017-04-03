@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import InviteContainer from './containers/InviteContainer';
+import InviteContainer from './containers/InviteContainer.jsx';
 import store from './store/store';
 
 const app = (
