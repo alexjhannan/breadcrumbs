@@ -7,6 +7,10 @@ export default function invite(state = {}, action) {
         inProgress: false,
         success: 'Added guest.'
       });
+      return newState;
+    }
+    case ACTION_TYPES.GuestAdded: {
+      const newState = Object.assign({}, state);
       newState.guests = newState.guests || [];
       newState.guests = newState.guests.slice();
       newState.guests.push(action.guest);

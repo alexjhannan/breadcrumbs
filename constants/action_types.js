@@ -4,7 +4,8 @@ const ACTION_TYPES = {
   GetInviteFulfilled: 'GET_INVITE_FULFILLED',
   AddToInviteRequested: 'ADD_TO_INVITE_REQUESTED',
   AddToInviteRejected: 'ADD_TO_INVITE_REJECTED',
-  AddToInviteFulfilled: 'ADD_TO_INVITE_FULFILLED'
+  AddToInviteFulfilled: 'ADD_TO_INVITE_FULFILLED',
+  GuestAdded: 'GUEST_ADDED_EVENT'
 };
 
 export default ACTION_TYPES;
