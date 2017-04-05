@@ -1,5 +1,7 @@
 import React, { PropTypes } from 'react';
 
+import firebase from 'firebase';
+
 export default class InviteComponent extends React.Component {
   static propTypes = {
     onGetInvite: PropTypes.func.isRequired
@@ -8,6 +10,23 @@ export default class InviteComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = { name: '' };
+  }
+
+  onLoginClick = () => {
+    firebase.auth().signInAnonymously().then(() => {
+      console.log('you just logged in!');
+    }).catch((error) => {
+      var errorCode = error.code;
+      var errorMessage = error.message;
+    });
+  }
+
+  onLogoutClick = () => {
+    firebase.auth().signOut().then(() => {
+      console.log('you just logged out!');
+    }).catch(() => {
+      console.error('something went wrong. you weren\'t logged out.');
+    });
   }
 
   componentDidMount() {
@@ -78,6 +97,12 @@ export default class InviteComponent extends React.Component {
               </button>
             </div>
           </div>
+          <button onClick={ this.onLoginClick }>
+            Anonymous Login
+          </button>
+          <button onClick={ this.onLogoutClick }>
+            Logout
+          </button>
         </div>
       </div>
     );
