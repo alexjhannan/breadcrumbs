@@ -2,7 +2,10 @@ var path = require('path');
 
 module.exports = {
   devtool: 'inline-source-map',
-  entry: __dirname + '/app.jsx',
+  devServer: {
+    historyApiFallback: true,
+  },
+  entry: __dirname + '/index.js',
   output: {
     filename: 'bundle.js'
   },

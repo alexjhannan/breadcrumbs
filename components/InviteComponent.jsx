@@ -47,9 +47,9 @@ export default class InviteComponent extends React.Component {
               <div className="col-sm-8 col-md-10">
                 { this.props.invite.guests &&
                   <ul>
-                    {
-                      this.props.invite.guests.map((guest) => <li>{ guest.name }</li>)
-                    }
+                    { this.props.invite.guests.map(
+                      (guest, i) => <li key={ i }>{ guest.name }</li>
+                    ) }
                   </ul>
                 }
               </div>
